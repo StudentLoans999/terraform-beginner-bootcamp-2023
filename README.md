@@ -237,3 +237,9 @@ If you lose this file, you lose knowing the state of your infrastructure.
 #### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers.
+
+### AWS S3 Terraform
+
+#### AWS S3 Bucket Naming
+
+We had to change the parameters in the bucket_name resouce in [main.tf](main.tf) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
