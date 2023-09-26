@@ -244,6 +244,10 @@ If you lose this file, you lose knowing the state of your infrastructure.
 
 We had to change the parameters in the bucket_name resouce in [main.tf](main.tf) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
 
+## Launching Terraform Cloud integration with CLI-driven workflow (backend)
+
+Created a Workspace in [app.terraform.io](https://app.terraform.io/app/david_richey/workspaces/terra-house-1) and followed the steps in the CLI-driven runs section by editing the [main.tf](main.tf)
+
 ## Issues with Terraform Cloud Login and Gitpod Workspace
 
 When attempting to run `terraform login` it will launch bash a winswig view to generate a token. However it does not work as expected in Gitpod VSCode in the browser.
