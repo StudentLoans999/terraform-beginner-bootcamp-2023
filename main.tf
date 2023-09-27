@@ -24,9 +24,6 @@ provider "random" {
 
 provider "aws" {
   # Configuration options
-  region = "us-east-1"
-  access_key=""
-  secret_key=""
 }
 
 # https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string
