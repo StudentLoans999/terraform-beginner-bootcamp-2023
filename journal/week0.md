@@ -24,7 +24,7 @@
     - [Terraform Init](terraform-init)
     - [Terraform Plan](terraform-plan)
     - [Terraform Apply](terraform-apply)
-    - [Terraform Destroy](Terraform Destroy)
+    - [Terraform Destroy](terraform-destroy)
     - [Terraform Lock Files](terraform-lock-files)
     - [Terraform State Files](terraform-state-files)
     - [Terraform Directory](terraform-directory)
