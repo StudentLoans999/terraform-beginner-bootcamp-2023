@@ -10,7 +10,7 @@
     - [Shebang Considerations](#shebang-considerations)
     - [Execution Considerations](#execution-considerations)
     - [Linux Permissions Considerations](#linux-permissions-considerations)
-- [Gitpod Lifecycle (Before, Init, Command)](#github-lifecycle-before-init-command)
+- [Gitpod Lifecycle - Before, Init, Command](#github-lifecycle-before-init-command)
 - [Working Env Vars](#working-env-vars)
     - [env command](#env-command)
     - [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
@@ -44,7 +44,7 @@ The general format:
 Given a version number **MAJOR.MINOR.PATCH**, eg. `1.0.1`
 
 - **MAJOR** version when you make incompatible API changes
-- **MINOR** version when you add functionality in a backward compatible manner
+- **MINOR** version when you add functionality in a backward-compatible manner
 - **PATCH** version when you make backward compatible bug fixes
 
 ## Install the Terraform CLI
@@ -57,7 +57,7 @@ The Terraform CLI installation instructions have changed due to gpg keyring chan
 ### Considerations for Linux Distribution
 
 This project is built against Ubuntu.
-Please consider checking your Linux Dostribution and change accordingly to distribution needs.
+Please consider checking your Linux Distribution and change accordingly to distribution needs.
 
 [How to Check OS Version in Linux](https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line/)
 
@@ -81,7 +81,7 @@ UBUNTU_CODENAME=jammy
 
 ### Refactoring into Bash Scripts
 
-While fixing the Terraform CLI gpg depreciation issues we noticed that the bash scripts steps were a consdierable amount more code. So we decided to creat a bash script to install the Terraform CLI.
+While fixing the Terraform CLI gpg depreciation issues we noticed that the bash scripts steps were a considerable amount more code. So we decided to create a bash script to install the Terraform CLI.
 
 This bash script is located here: [./bin/install_terraform_cli](./bin/install_terraform_cli)
 
@@ -91,7 +91,7 @@ This bash script is located here: [./bin/install_terraform_cli](./bin/install_te
 
 ### Shebang Considerations
 
-A Shebang (pronounced Sha-bang) tells the bash script what program that will interpret the script. rg. `#!/bin/bash`
+A Shebang (pronounced Sha-bang) tells the bash script what program will interpret the script. rg. `#!/bin/bash`
 
 ChatGPT recommended this format for bash: `#!/usr/bin/env bash`
 
@@ -124,7 +124,7 @@ chmod 744 ./bin/install_terraform_cli
 
 https://en.wikipedia.org/wiki/Chmod
 
-## Gitpod Lifecycle (Before, Init, Command)
+## Gitpod Lifecycle - Before, Init, Command
 
 We need to be careful when using the Init because it will not rerun if we restart an existing workspace.
 
@@ -196,7 +196,7 @@ We can check if our AWS credentials is configured correctly by running the follo
 aws sts get-caller-identity
 ```
 
-IF it is successful you should see a json payload return that looks like this:
+If it is successful you should see a json payload return that looks like this:
 
 ```json
 {
@@ -214,8 +214,8 @@ We'll need to generate AWS CLI credentials from IAM User in order to use the AWS
 
 Terraform sources their providers and modules from the Terraform registry which located at [registry.terraform.io](https://registry.terraform.io/)
 
-- **Providers** is an interfact to APIs that will allow to create resources in terraform.
-- **Modules** are a way to make large amount of terraform code modular, portable, and shareable.
+- **Providers** is an interface to APIs that will allow to create resources in terraform.
+- **Modules** are a way to make large amounts of terraform code modular, portable, and shareable.
 
 [Random Terraform Provider](https://registry.terraform.io/providers/hashicorp/random)
 
