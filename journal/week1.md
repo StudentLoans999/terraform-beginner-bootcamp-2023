@@ -4,7 +4,7 @@
 
 Our root module structure is as follows:
 
--PROJECT_ROOT
+- PROJECT_ROOT
   -  variables.tf - stores the structure of input variables
   -  main.tf - everything else
   -  providers.tf - defined required providers and their configuration
