@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Terraform Syncing with Github](#erraform-syncing-with-github)
 - [Semantic Versioning](#semantic-versioning)
 - [Install the Terraform CLI](#install-the-terraform-cli)
   - [Considerations with the Terraform CLI changes](#considerations-with-the-terraform-cli-changes)
@@ -33,6 +34,27 @@
 - [Launching Terraform Cloud integration with CLI-driven workflow](#launching-terraform-cloud-integration-with-cli-driven-workflow)
 - [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
 - [TF alias for Terraform](#tf-alias-for-terraform)
+
+## Terraform Syncing with Github
+
+At the beginning of an update to files, go to Gihub and create a new Issue (make a checklist inside of it), and make a new branch from it.
+
+Then switch to that branch in Code, and open up a new Gitpod session.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+At the end of a Gitpod session when you want to apply changes, commit the Source Control file changes in Gitpod, then Sync Changes.
+
+Next, go to Github and check off the completed steps in the Issue, and then create a new Pull Request with the branch you were working on in Gitpod (usually the latest one).
+
+Check Code for the latest tag version, then go back to Gitpod and apply a new tag that syncs back to Github by doing the following:
+
+```sh
+git checkout main
+git pull
+git tag #.#.#
+git push --tags
+```
 
 ## Semantic Versioning :mage:
 
@@ -322,4 +344,3 @@ Set an alias for terraform to be tf in our bash profile.
 Then created this bash script to make sure it is always set [set_tf_alias]([set_tf_alias])
 
 Edited [.gitpod.yml](.gitpod.yml) to have `source ./bin/set_tf_alias` in both bash environemnts
-
