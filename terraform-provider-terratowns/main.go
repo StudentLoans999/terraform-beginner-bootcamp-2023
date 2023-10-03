@@ -5,22 +5,63 @@ package main
 
 // fmt is short format, it contains functions for formatted I/O
 
-import {
+import (
+	//"log"
 	"fmt"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
-}
+)
 // `func main()` defines the `main` function, the entry point of the application.
 // When you run the program, it starts executing from this function
 
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
-		ProviderFunc: Provider
+		ProviderFunc: Provider,
 	})
 	// Format.PrintLine
 	// Prints to standard output
     fmt.Println("Hello, World!")
 }
 
+// In golang, a titlecase function will get exported
 func Provider() *schema.Provider {
 	var p *schema.Provider
+	p = &schema.Provider {
+		ResourcesMap: map[string]*schema.Resource{
+
+		},
+		DataSourcesMap: map[string]*schema.Resource{
+
+		},
+		Schema: map[string]*schema.Schema{
+			"endpoint": {
+				Type: schema.TypeString,
+				Required: true,
+				Description: "The endpoint for the external servoce",
+			},
+			"token": {
+				Type: schema.TypeString,
+				Sensitive: true, // Marks the token as sensitive to hide it in the logs
+				Required: true,
+				Description: "Bearer token for authorization",
+			},
+			"user_uuid": {
+				Type: schema.TypeString,
+				Required: true,
+				Description: "UUID for configuration",
+				//ValidateFunc: validateUUID
+			},
+		},
+	}
+	//p.ConfigureContextFunc = providerConfigure(p)
+	return p
 }
+
+/*func validateUUID(v interface{}, k string) (ws []string, errors []error) {
+	log.Print('validateUUID:start')
+	value := v.(string)
+	if _, err := uuid.Parse(value); if err != nil {
+		errors = append(errors, fmt.Errorf("Invalid UUID format"))
+	}
+	log.Print('validateUUID:start')
+}*/
