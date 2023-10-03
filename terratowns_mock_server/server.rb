@@ -31,7 +31,7 @@ class Home
   # gamers-grotto
   # cooker-cove
   validates :town, presence: true, inclusion { in: [  
-  'melomaniac-mansion' , 
+  'melomaniac-mansion', 
   'cooker-cove',
   'video-valley',
   'the-nomad-pad',
