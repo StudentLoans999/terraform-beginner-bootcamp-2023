@@ -1,7 +1,7 @@
 tasks:
   - name: terraform
     env:
-    TF_LOG: DEBUG
+      TF_LOG: DEBUG
     before: |
       cd $PROJECT_ROOT
       source ./bin/set_tf_alias
@@ -25,8 +25,9 @@ tasks:
     before: |
       cd $PROJECT_ROOT
       npm install --global http-server
-    command:
+    command: 
       http-server
+
 vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
