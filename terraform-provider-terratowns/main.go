@@ -32,11 +32,11 @@ type Config struct {
 	UserUuid string
 }
 
-// in golang, a titlecase function will get exported.
+// In golang, a titlecase function will get exported
 func Provider() *schema.Provider {
 	var p *schema.Provider
-	p = &schema.Provider{
-		ResourcesMap:  map[string]*schema.Resource{
+	p = &schema.Provider {
+		ResourcesMap: map[string]*schema.Resource{
 			"terratowns_home": Resource(),
 		},
 		DataSourcesMap:  map[string]*schema.Resource{
@@ -46,7 +46,7 @@ func Provider() *schema.Provider {
 			"endpoint": {
 				Type: schema.TypeString,
 				Required: true,
-				Description: "The endpoint for hte external service",
+				Description: "The endpoint for the external service",
 			},
 			"token": {
 				Type: schema.TypeString,
@@ -125,6 +125,8 @@ func Resource() *schema.Resource {
 		},
 	}
 	log.Print("Resource:start")
+	}
+	log.Print("Resource:end")
 	return resource
 }
 
@@ -238,6 +240,7 @@ func resourceHouseRead(ctx context.Context, d *schema.ResourceData, m interface{
 }
 
 func resourceHouseUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+
 	log.Print("resourceHouseUpdate:start")
 	var diags diag.Diagnostics
 
