@@ -8,7 +8,7 @@ variable "user_uuid" {
   }
 }
 
-variable "bucket_name" {
+/*variable "bucket_name" {
   description = "Name of the AWS S3 bucket"
   type = string
 
@@ -16,7 +16,7 @@ variable "bucket_name" {
     condition = length(var.bucket_name) >= 3 && length(var.bucket_name) <= 63
     error_message = "Bucket name length must be between 3 and 63 characters."
   }
-}
+}*/
 
 variable "index_html_filepath" {
   description = "The file path for index.html"
