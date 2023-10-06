@@ -60,7 +60,13 @@ We can use the `-var` flag to set an input variable or override a variable in th
 
 ### var-file flag
 
-- TODO: document this flag
+[Terraform Input Variables - Variable Definitions Files AKA .tfvars](https://developer.hashicorp.com/terraform/language/values/variables#variable-definitions-tfvars-files)
+
+`var-file` is a flag used to specify a variable definitions file
+
+```tf
+terraform apply -var-file="testing.tfvars"
+```
 
 ### terraform.tfvars 
 
@@ -68,11 +74,21 @@ This is the default file to load in terraform variables in bulk
 
 ### auto.tfvars
 
-- TODO: document this functionality for terraform cloud
+[Terraform Input Variables - .auto.tfvars](https://developer.hashicorp.com/terraform/language/values/variables#variable-definitions-tfvars-files)
+
+Files with names ending in `.auto.tfvars`  or `terraform.tfvars` automatically loads all the varaibles set in them (these files are called variable definitions)
 
 ### Order of Terraform Variables
 
-- TODO: document which terraform variables take precedence
+[Terraform Input Variables - Variable Definition Precedence](https://developer.hashicorp.com/terraform/language/values/variables#variable-definition-precedence)
+
+Terraform loads variables in the following order, with later sources taking precedence over earlier ones:
+
+Environment variables
+The terraform.tfvars file, if present.
+The terraform.tfvars.json file, if present.
+Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
+Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
 
 ## Dealing with Configuration Drift
 
