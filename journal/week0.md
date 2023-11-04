@@ -298,11 +298,11 @@ If you lose this file, you lose knowing the state of your infrastructure.
 
 ### AWS S3 Bucket Naming
 
-We had to change the parameters in the bucket_name resouce in ([main.tf](main.tf)) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
+We had to change the parameters in the bucket_name resouce in ([/main.tf](/main.tf)) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
 
 ## Launching Terraform Cloud integration with CLI-driven workflow
 
-Created a Workspace in [app.terraform.io](https://app.terraform.io/app/david_richey/workspaces/terra-house-1) and followed the steps in the CLI-driven runs section by editing the ([main.tf](main.tf))
+Created a Workspace in [app.terraform.io](https://app.terraform.io/app/david_richey/workspaces/terra-house-1) and followed the steps in the CLI-driven runs section by editing the ([/main.tf](/main.tf))
 
 ## Issues with Terraform Cloud Login and Gitpod Workspace
 
@@ -332,7 +332,7 @@ Provide the following code (replace your token in the file):
 }
 ```
 
-We have automated this workaround with the following bash script ([bin/generate_tfrc_credentials](bin/generate_tfrc_credentials))
+We have automated this workaround with the following bash script ([/bin/generate_tfrc_credentials](/bin/generate_tfrc_credentials))
 
 ## TF alias for Terraform
 
@@ -341,6 +341,6 @@ Set an alias for terraform to be tf in our bash profile.
 `open ~/.bash_profile` in console
 `alias tf="terraform"` in the opened file
 
-Then created this bash script to make sure it is always set ([set_tf_alias](set_tf_alias))
+Then created this bash script to make sure it is always set ([/set_tf_alias](/set_tf_alias))
 
-Edited ([.gitpod.yml](.gitpod.yml)) to have `source ./bin/set_tf_alias` in both bash environemnts
+Edited ([/.gitpod.yml](/.gitpod.yml)) to have `source ./bin/set_tf_alias` in both bash environemnts
