@@ -107,7 +107,7 @@ While fixing the Terraform CLI gpg depreciation issues we noticed that the bash 
 
 This bash script is located here: ([/bin/install_terraform_cli](/bin/install_terraform_cli))
 
-- This will keep the Gitpod Task File ([.gitpod.yml](.gitpod.yml)) tidy.
+- This will keep the Gitpod Task File ([/.gitpod.yml](/.gitpod.yml)) tidy.
 - This will allow an easier time to debug and execute manually Terraform CLI install.
 - This will allow better portability for other projects that need to install Terraform CLI.
 
