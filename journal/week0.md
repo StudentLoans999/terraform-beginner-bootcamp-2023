@@ -152,7 +152,7 @@ We need to be careful when using the Init because it will not rerun if we restar
 
 https://www.gitpod.io/docs/configure/workspaces/tasks
 
-## Working Env Vars
+## Working with Env Vars
 
 ### env command
 
