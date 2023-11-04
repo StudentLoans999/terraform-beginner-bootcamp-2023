@@ -341,6 +341,6 @@ Set an alias for terraform to be tf in our bash profile.
 `open ~/.bash_profile` in console
 `alias tf="terraform"` in the opened file
 
-Then created this bash script to make sure it is always set ([/set_tf_alias](/set_tf_alias))
+Then created this bash script to make sure it is always set ([/bin/set_tf_alias](/bin/set_tf_alias))
 
 Edited ([/.gitpod.yml](/.gitpod.yml)) to have `source ./bin/set_tf_alias` in both bash environemnts
