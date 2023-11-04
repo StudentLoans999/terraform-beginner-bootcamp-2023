@@ -206,7 +206,7 @@ You can also set env vars in the `.gitpod.yml` but this can only contain non-sen
 
 ## AWS CLI Installation
 
-AWS CLI is installed for the project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+AWS CLI is installed for the project via the bash script ([/bin/install_aws_cli](/bin/install_aws_cli))
 
 [Getting Started Install (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
