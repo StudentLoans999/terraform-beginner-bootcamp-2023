@@ -105,7 +105,7 @@ UBUNTU_CODENAME=jammy
 
 While fixing the Terraform CLI gpg depreciation issues we noticed that the bash scripts steps were a considerable amount more code. So we decided to create a bash script to install the Terraform CLI.
 
-This bash script is located here: [./bin/install_terraform_cli](./bin/install_terraform_cli)
+This bash script is located here: [./bin/install_terraform_cli]
 
 - This will keep the Gitpod Task File ([gitpod.yml](gitpod.yml)) tidy.
 - This will allow an easier time to debug and execute manually Terraform CLI install.
