@@ -9,3 +9,8 @@
 
 ## Extras
 - [GitHub Markdown TOC generator](https://ecotrust-canada.github.io/markdown-toc/)
+
+## References
+- `chmod`: https://en.wikipedia.org/wiki/Chmod
+- `shebang`: https://en.wikipedia.org/wiki/Shebang_(Unix)
+- `gitpod workspaces`: https://www.gitpod.io/docs/configure/workspaces/tasks
