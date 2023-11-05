@@ -11,8 +11,8 @@
     - [Shebang Considerations](#shebang-considerations)
     - [Execution Considerations](#execution-considerations)
     - [Linux Permissions Considerations](#linux-permissions-considerations)
-- [Gitpod Lifecycle - Before, Init, Command](#gitpod-lifecycle---before-init-command)
-- [Working Env Vars](#working-env-vars)
+- [GitHub Lifecycle - Before, Init, Command](#github-lifecycle---before-init-command)
+- [Working with Env Vars](#working-env-vars)
     - [env command](#env-command)
     - [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
     - [Printing Vars](#printing-vars)
@@ -113,7 +113,7 @@ This bash script is located here: ([/bin/install_terraform_cli](/bin/install_ter
 
 ### Shebang Considerations
 
-A Shebang (pronounced Sha-bang) tells the bash script what program will interpret the script. rg. `#!/bin/bash`
+A Shebang (pronounced Sha-bang) tells the bash script what program will interpret the script. eg. `#!/bin/bash`
 
 ChatGPT recommended this format for bash: `#!/usr/bin/env bash`
 
@@ -146,11 +146,11 @@ chmod 744 ./bin/install_terraform_cli
 
 https://en.wikipedia.org/wiki/Chmod
 
-## Gitpod Lifecycle - Before, Init, Command
+## GitHub Lifecycle - Before, Init, Command
 
 We need to be careful when using the Init because it will not rerun if we restart an existing workspace.
 
-https://www.gitpod.io/docs/configure/workspaces/tasks
+[Configure gitpod workspaces](https://www.gitpod.io/docs/configure/workspaces/tasks)
 
 ## Working with Env Vars
 
