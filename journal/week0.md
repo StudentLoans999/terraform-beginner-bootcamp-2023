@@ -354,8 +354,13 @@ The workaround is to manually generate a token in the Terraform Cloud console
 ```
 https://app.terraform.io/app/settings/tokens?source=terraform-login
 ```
+or
 
-Then create and open the file manually here:
+```
+https://app.terraform.io/app/settings/tokens
+```
+
+Then create and open the credentials file manually:
 
 ```sh
 touch /home/gitpod/.terraform.d/credentials.tfrc.json
