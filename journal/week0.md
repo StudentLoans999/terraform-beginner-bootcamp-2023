@@ -236,10 +236,14 @@ We'll need to generate AWS CLI credentials from IAM User in order to use the AWS
 
 Terraform sources their providers and modules from the Terraform registry which located at [registry.terraform.io](https://registry.terraform.io/)
 
-- **Providers** is an interface to APIs that will allow to create resources in terraform.
-- **Modules** are a way to make large amounts of terraform code modular, portable, and shareable.
+- **Providers** is an interface to APIs that will allow you to create resources in terraform. (Interact directly with.)
+- **Modules** are a way to make large amounts of terraform code modular, portable, and shareable. (Templates.) Containers for multiple resources that are used together. A module consists of a collection of `.tf` and/or `.tf.json` files kept together in a directory. Modules are the main way to package and reuse resource configurations with terraform.
 
 [Random Terraform Provider](https://registry.terraform.io/providers/hashicorp/random)
+
+- [Official Terraform Registry](https://registry.terraform.io/)
+- [More on Terraform `random` provider](https://registry.terraform.io/providers/hashicorp/random/latest/docs)
+- [Terraform AWS documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 ### Terraform Console
 
@@ -256,6 +260,8 @@ At the start of a new terraform project we will run `terraform init` to download
 This will generate out a changeset, about the state of our infrastructure and what will be changed.
 
 We can output this changeset ie. "plan" to be passed to an apply, but often you can just ignore outputting.
+
+Generates an overview of what is going to change from the current set of resources.
 
 ### Terraform Apply
 
