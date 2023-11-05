@@ -267,14 +267,17 @@ Generates an overview of what is going to change from the current set of resourc
 
 `terraform apply`
 
-This will run a plan and pass the changeset to be executed by terraform. Apply should prompt yes or no.
+This will run a `terraform plan` and pass the changeset to be executed by terraform. Apply should prompt yes or no.
 
-If we want to automatically approve an apply we can provide the auto approve flag eg. ` terraform apply --auto=approve`
+If we want to automatically approve an apply we can provide the auto approve flag eg. `terraform apply --auto=approve`
+
+(Executes the provisioning of the resources.)
 
 ### Terraform Destroy
 
 `terraform destroy`
-This will destroy resources.
+
+This will destroy all the resources that were created. (The safest way to get rid of resources; don't clean up manually.)
 
 You can also use the auto approve flag to skip the approval prompt eg. `terraform destroy --auto-approve`
 
@@ -300,21 +303,54 @@ If you lose this file, you lose knowing the state of your infrastructure.
 
 `.terraform` directory contains binaries of terraform providers.
 
+### **Terraform Commands**
+
+**Main commands:**
+- `init`          Prepare your working directory for other commands  
+- `validate`      Check whether the configuration is valid  
+- `plan`          Show changes required by the current configuration  
+- `apply`         Create or update infrastructure  
+- `destroy`       Destroy previously-created infrastructure  
+
+**All other commands:**
+- `console`       Try Terraform expressions at an interactive command prompt 
+- `fmt`           Reformat your configuration in the standard style  
+- `force-unlock`  Release a stuck lock on the current workspace  
+- `get`           Install or upgrade remote Terraform modules  
+- `graph`         Generate a Graphviz graph of the steps in an operation  
+- `import`        Associate existing infrastructure with a Terraform resource  
+- `login`         Obtain and save credentials for a remote host  
+- `logout`        Remove locally-stored credentials for a remote host  
+- `metadata`      Metadata related commands  
+- `output`        Show output values from your root module  
+- `providers`     Show the providers required for this configuration  
+- `refresh`       Update the state to match remote systems  
+- `show`          Show the current state or a saved plan  
+- `state`         Advanced state management  
+- `taint`         Mark a resource instance as not fully functional  
+- `test`          Experimental support for module integration testing  
+- `untaint`       Remove the 'tainted' state from a resource instance  
+- `version`       Show the current Terraform version  
+- `workspace`     Workspace management  
+
 ## AWS S3 Terraform
 
 ### AWS S3 Bucket Naming
 
-We had to change the parameters in the bucket_name resouce in ([/main.tf](/main.tf)) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
+We had to change the parameters in the bucket_name resource in ([/main.tf](/main.tf)) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
 
 ## Launching Terraform Cloud integration with CLI-driven workflow
+
+- Terraform Workspace: a container in Terraform Cloud for infrastructure state, configurations, and settings. 
+- Terraform Project: an overarching effort or goal, potentially consisting of multiple Terraform Cloud Workspaces.
 
 Created a Workspace in [app.terraform.io](https://app.terraform.io/app/david_richey/workspaces/terra-house-1) and followed the steps in the CLI-driven runs section by editing the ([/main.tf](/main.tf))
 
 ## Issues with Terraform Cloud Login and Gitpod Workspace
 
-When attempting to run `terraform login` it will launch bash in a winswig view to generate a token. However it does not work as expected in Gitpod VSCode in the browser.
+When attempting to run `terraform login` it will launch bash in a winswig view to generate a token. However, it does not work as expected in Gitpod VSCode in the browser.
 
-The workaround is to manually generate a token in Terraform Cloud
+The workaround is to manually generate a token in the Terraform Cloud console
 ```
 https://app.terraform.io/app/settings/tokens?source=terraform-login
 ```
