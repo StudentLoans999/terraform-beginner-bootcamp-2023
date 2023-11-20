@@ -84,33 +84,9 @@ aws cloudfront list-cloud-front-origin-access-identities
 
 ### Week 1 Livestream Agenda
 
-- ✅ 1. Create an S3 bucket to store your static website & enable the S3 bucket for static website hosting.
-- ✅ 2. Prepare a simple html template for static website hosting.
-- ✅ 3. Create a CloudFront distribution and tweak around the configuration to host your static html website.
-  
-## Fixing Tags
-
-[How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
-
-
-Locally delete a tag
-```sh
-git tag -d <tag_name>
-```
-
-Remotely delete a tag
-```sh
-git push --delete origin tagname
-```
-
-Checkout the commit that you want to retag. Grab the sha from your Github history.
-
-```sh
-git checkout <SHA>
-git tag M.M.P
-git push --tags
-git checkout main
-```
+- ✅ 1. Create an S3 bucket to store my static website (and enable the S3 bucket for static website hosting)
+- ✅ 2. Create a simple html file to serve as the static website
+- ✅ 3. Create a CloudFront distribution and use it to host my html file as a static website
 
 ## Root Module Structure
 
@@ -248,7 +224,31 @@ module "terrahouse_aws" {
 
 [Modules Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 
-## Considerations when using ChatGPT to write Terrafomr
+## Fixing Tags
+
+[How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
+
+
+Locally delete a tag
+```sh
+git tag -d <tag_name>
+```
+
+Remotely delete a tag
+```sh
+git push --delete origin tagname
+```
+
+Checkout the commit that you want to retag. Grab the sha from your Github history.
+
+```sh
+git checkout <SHA>
+git tag M.M.P
+git push --tags
+git checkout main
+```
+
+## Considerations when using ChatGPT to write Terraform
 
 LLMs such as ChatGPT may not be trained on the latest documentation or information about Terraform.
 
