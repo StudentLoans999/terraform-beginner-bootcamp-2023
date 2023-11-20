@@ -1,5 +1,7 @@
 # Terraform Beginner Bootcamp 2023 - Week 1
 
+## Table of Contents
+
 - [Week 1 Live stream](#week-1-live-stream)
   - [Week 1 Live agenda](#week-1-live-stream-agenda)
 - [Journal TOC and Major Version](#journal-toc-and-major-version)
