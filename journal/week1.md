@@ -7,7 +7,7 @@
 - [Root Module Structure](#root-module-structure)
 - [Terraform and Input Variables](#terraform-and-input-variables)
   - [Terraform Cloud Variables](#terraform-cloud-variables)
-  - [Loading Terraform I Variables](#loading-terraform-input-variables)
+  - [Loading Terraform Input Variables](#loading-terraform-input-variables)
   - [`var` flag](#var-flag)
   - [`var-file` flag](#var-file-flag)
   - [`terraform.tfvars`](#terraformtfvars)
