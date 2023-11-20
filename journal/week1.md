@@ -5,7 +5,7 @@
 - [Week 1 Livestream](#week-1-livestream)
   - [Week 1 Livestream Agenda](#week-1-livestream-agenda)
 - [Root Module Structure](#root-module-structure)
-- [Terraform and Input Variables](#terraform-and-input-variables)
+- [Terraform Cloud and Input Variables](#terraform-cloud-and-input-variables)
   - [Terraform Cloud Variables](#terraform-cloud-variables)
   - [Loading Terraform Input Variables](#loading-terraform-input-variables)
   - [`var` flag](#var-flag)
@@ -111,7 +111,7 @@ code variables.tf
 
 [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
-## Terraform and Input Variables
+## Terraform Cloud and Input Variables
 
 ### Terraform Cloud Variables 
 
