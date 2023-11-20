@@ -127,7 +127,12 @@ We can set Terraform Cloud Variables to be sensitive so they are not shown visib
 
 [Terraform Input Variables](https://developer.hashicorp.com/terraform/language/values/variables)
 
-We can use the `-var` flag to set an input variable or override a variable in the tfvars file eg. `terraform -var user_uid="my-user_uid"`
+We can use the `-var` flag to set an input variable or override a variable in the tfvars file eg. `terraform -var user_uid="xyz"
+
+This will override the pre-defined variable in other files:
+```
+terraform apply -var = "user_uid="my-user_uid"
+```
 
 ### var-file flag
 
