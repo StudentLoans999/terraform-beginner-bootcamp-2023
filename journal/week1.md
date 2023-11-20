@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-- [Week 1 Live stream](#week-1-live-stream)
-  - [Week 1 Live agenda](#week-1-live-stream-agenda)
+- [Week 1 Livestream](#week-1-livestream)
+  - [Week 1 Livestream Agenda](#week-1-livestream-agenda)
 - [Journal TOC and Major Version](#journal-toc-and-major-version)
   - [Journal TOC and Major Version - Medium Blog](https://medium.com/@gwenleigh/terraform-cloud-project-bootcamp-with-andrew-brown-journal-toc-and-major-version-for-good-33a9084a3d47)
 - [Root Module Structure](#root-module-structure)
@@ -34,6 +34,60 @@
   - [Local-exec](#local-exec)
   - [Remote-exec](#remote-exec)
 
+## Week 1 Livestream
+
+The commands used throughout this week's stream:
+
+```
+# install http-server globally.
+npm install http-server -g
+
+# start the http-server.
+http-server 
+
+# Upload a single file
+aws s3 cp public/index.html s3://YOUR_BUCKET_NAME/index.html
+
+# Upload a folder with multiple files
+aws s3 sync public s3://YOUR_BUCKET_NAME
+
+# Check CloudFront list of OACs 
+aws cloudfront list-origin-access-controls
+aws cloudfront list-origin-access-controls --output table
+
+aws cloudfront list-cloud-front-origin-access-identities
+
+
+# Bucket policy
+
+{
+    "Version": "2008-10-17",
+    "Id": "PolicyForCloudFrontPrivateContent",
+    "Statement": [
+        {
+            "Sid": "AllowCloudFrontServicePrincipal",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudfront.amazonaws.com"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::nomadiachi-in-terratown-bucket/*",
+            "Condition": {
+                "StringEquals": {
+                    "AWS:SourceArn": "arn:aws:cloudfront::AWS_ACCOUNT_ID:distribution/DISTRIBUTION_ID"
+                }
+            }
+        }
+    ]
+ }
+```
+
+### Week 1 Live stream Agenda
+
+- ✅ 1. Create an S3 bucket to store your static website & enable the S3 bucket for static website hosting.
+- ✅ 2. Prepare a simple html template for static website hosting.
+- ✅ 3. Create a CloudFront distribution and tweak around the configuration to host your static html website.
+  
 ## Fixing Tags
 
 [How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
@@ -90,9 +144,9 @@ In terraform we can set two kind of variables:
 
 - Environment Variables - those you would set in your bash terminal eg. AWS credentials
 
--Terraform Variables - those that you would normally set in your tfvars file
+- Terraform Variables - those that you would normally set in your tfvars file
 
-We can cset Terraform Cloud Variables to be sensitvie so they are not shown visibly in the UI.
+We can set Terraform Cloud Variables to be sensitive so they are not shown visibly in the UI.
 
 ### Loading Terraform Input Variables
 
