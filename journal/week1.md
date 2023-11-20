@@ -141,7 +141,7 @@ terraform apply -var = "user_uid="my-user_uid"
 `var-file` is a flag used to specify a variable definitions file
 
 ```tf
-terraform apply -var-file="testing.tfvars"
+terraform apply -var-file = "testing.tfvars"
 ```
 
 ### terraform.tfvars 
