@@ -72,6 +72,14 @@ PROJECT_ROOT
 |-- README.md                # required for root modules
 ```
 
+Manually generate the files using the following commands:
+```
+code outputs.tf
+code providers.tf
+code terraform.tfvars
+code variables.tf
+```
+
 [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
 ## Terraform and Input Variables
