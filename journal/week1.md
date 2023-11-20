@@ -82,7 +82,7 @@ aws cloudfront list-cloud-front-origin-access-identities
  }
 ```
 
-### Week 1 Live stream Agenda
+### Week 1 Livestream Agenda
 
 - ✅ 1. Create an S3 bucket to store your static website & enable the S3 bucket for static website hosting.
 - ✅ 2. Prepare a simple html template for static website hosting.
