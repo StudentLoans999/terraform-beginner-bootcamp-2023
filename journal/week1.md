@@ -32,6 +32,7 @@
   - [Provisioners](#provisioners)
   - [Local-exec](#local-exec)
   - [Remote-exec](#remote-exec)
+- [Misc](#misc) 
 
 ## Week 1 Livestream
 
@@ -236,36 +237,6 @@ module "terrahouse_aws" {
 }
 ```
 
-## Fixing Tags
-
-[How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
-
-
-Locally delete a tag
-```sh
-git tag -d <tag_name>
-```
-
-Remotely delete a tag
-```sh
-git push --delete origin tagname
-```
-
-Checkout the commit that you want to retag. Grab the sha from your Github history.
-
-```sh
-git checkout <SHA>
-git tag M.M.P
-git push --tags
-git checkout main
-```
-
-## Considerations when using ChatGPT to write Terraform
-
-LLMs such as ChatGPT may not be trained on the latest documentation or information about Terraform.
-
-It may likely produce older examples that could be deprecated (often affecting providers).
-
 ## Working with Files in Terraform
 
 ### Fileexists function
@@ -417,3 +388,34 @@ For Each allows us to enumerate over complex data types
 This is useful for when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
 
 [For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
+
+### Misc
+
+## Fixing Tags
+
+[How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
+
+Locally delete a tag
+```sh
+git tag -d <tag_name>
+```
+
+Remotely delete a tag
+```sh
+git push --delete origin tagname
+```
+
+Checkout the commit that you want to retag. Grab the sha from your Github history.
+
+```sh
+git checkout <SHA>
+git tag M.M.P
+git push --tags
+git checkout main
+```
+
+## Considerations when using ChatGPT to write Terraform
+
+LLMs such as ChatGPT may not be trained on the latest documentation or information about Terraform.
+
+It may likely produce older examples that could be deprecated (often affecting providers).
