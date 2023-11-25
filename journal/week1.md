@@ -20,6 +20,7 @@
   - [Our Terrahome Modules Structure](#our-terrahome-modules-structure)
   - [Passing input variables](#passing-input-variables)
   - [Module sources](#module-sources)
+- [Working with Files in Terraform](#working-with-files-in-terraform)
 - [1.5.0 Content Delivery Network](#content-delivery-network)
   - [Data Sources](#data-sources)
   - [Terraform locals](#terraform-locals)
