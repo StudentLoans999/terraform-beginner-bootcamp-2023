@@ -223,7 +223,7 @@ module "terrahouse_aws" {
 }
 ```
 
-### Module Sources
+### [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 
 Using the source we can import the module from various places eg:
 - locally
@@ -235,8 +235,6 @@ module "terrahouse_aws" {
   source = "./modules/terrahouse_aws"
 }
 ```
-
-[Modules Source](https://developer.hashicorp.com/terraform/language/modules/sources)
 
 ## Fixing Tags
 
