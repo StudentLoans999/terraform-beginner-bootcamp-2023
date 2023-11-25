@@ -340,16 +340,16 @@ If you lose this file, you lose knowing the state of your infrastructure.
 
 We had to change the parameters in the bucket_name resource in ([/main.tf](/main.tf)) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
 
-### Terraform Cloud and Terraform login
+## Terraform Cloud and Terraform login
 
-## Launching Terraform Cloud integration with CLI-driven workflow
+### Launching Terraform Cloud integration with CLI-driven workflow
 
 - Terraform Workspace: a container in Terraform Cloud for infrastructure state, configurations, and settings. 
 - Terraform Project: an overarching effort or goal, potentially consisting of multiple Terraform Cloud Workspaces.
 
 Created a Workspace in [app.terraform.io](https://app.terraform.io/app/david_richey/workspaces/terra-house-1) and followed the steps in the CLI-driven runs section by editing the ([/main.tf](/main.tf))
 
-## Issues with Terraform Cloud Login and Gitpod Workspace
+### Issues with Terraform Cloud Login and Gitpod Workspace
 
 When attempting to run `terraform login` it will launch bash in a winswig view to generate a token. However, it does not work as expected in Gitpod VSCode in the browser.
 
@@ -384,7 +384,7 @@ Provide the following code (replace your token in the file):
 
 We have automated this workaround with the following bash script ([/bin/generate_tfrc_credentials](/bin/generate_tfrc_credentials))
 
-### TF alias for Terraform
+## TF alias for Terraform
 
 Set an alias for terraform to be tf in our bash profile.
 
