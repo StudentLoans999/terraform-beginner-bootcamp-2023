@@ -379,7 +379,7 @@ resource "aws_instance" "web" {
 
 ### Assets Upload For Each
 
-## For Each Expressions
+## [For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
 
 For Each allows us to enumerate over complex data types
 
@@ -389,13 +389,9 @@ For Each allows us to enumerate over complex data types
 
 This is useful for when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
 
-[For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
-
 ### Misc
 
-## Fixing Tags
-
-[How to Delete Local and Remote Tags on Git](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
+## [Fixing Tags](https://devconnected.com/how-to-delete-local-and-remote-tags-on-git/)
 
 Locally delete a tag
 ```sh
