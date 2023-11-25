@@ -24,15 +24,11 @@
   - [Fileexists Function](#fileexists-function)
   - [Filemd5 Function](#filemd5-function)
   - [Path Variable](#path-variable) 
-- [1.5.0 Content Delivery Network](#content-delivery-network)
-  - [Data Sources](#data-sources)
-  - [Terraform locals](#terraform-locals)
-  - [Working with JSON](#working-with-json)
-- [1 6 0 Content Delivery Network](#1-6-0-content-delivery-network)
-  - [Data Sources](#data-sources)
+- [Content Delivery Network](#content-delivery-network)
   - [Terraform Locals](#terraform-locals)
+  - [Terraform Data Sources](#terraform-data-sources)
   - [Working with JSON](#working-with-json)
-- [1.7.0 Invalidate Cache Local Exec](#1-7-0-invalidate-cache-local-exec)
+- [Invalidate Cache Local Exec](#invalidate-cache-local-exec)
   - [Provisioners](#provisioners)
   - [Local-exec](#local-exec)
   - [Remote-exec](#remote-exec)
@@ -273,7 +269,9 @@ resource "aws_s3_object" "index_html" {
 }
 ```
 
-## Terraform Locals
+## Content Delivery Network
+
+### Terraform Locals
 
 Locals allow us to define local variables.
 It can be very useful when we need to transform data into another format and have it referenced as a variable.
@@ -286,7 +284,7 @@ locals {
 
 [Local Values](https://developer.hashicorp.com/terraform/language/values/locals)
 
-## Terraform Data Sources
+### Terraform Data Sources
 
 This allows us to source data from cloud resources.
 
@@ -302,7 +300,7 @@ output "account_id" {
 
 [Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
 
-## Working with JSON
+### Working with JSON
 
 We use the jsonencode to create the json policy inline in the hcl.
 
@@ -317,7 +315,7 @@ We use the jsonencode to create the json policy inline in the hcl.
 
 [Meta Arguments Lifecycle](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
 
-## Terraform Data
+### Terraform Data
 
 Plain data values such as Local Values and Input Variables don't have any side-effects to plan against and so they aren't valid in replace_triggered_by. You can use terraform_data's behavior of planning an action each time input changes to indirectly use a plain value to trigger replacement.
 
@@ -331,17 +329,17 @@ resource "aws_s3_object" "index_html" {
 }
 ```
 
-## Provisioners
+## Invalidate Cache Local Exec
+
+### [Provisioners](https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax)
 
 Provisioners allow you to execute commands on compute instances eg. an AWS CLI command.
 
-They are not recommended for use by Hashicorp becausey Configuration Management tools such as Ansible are a better fit, but the functionality exists.
+They are not recommended for use by Hashicorp because Configuration Management tools such as Ansible are a better fit, but the functionality exists.
 
-[Provisioners](https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax)
+### [Local-exec](https://developer.hashicorp.com/terraform/language/resources/provisioners/local-exec)
 
-### Local-exec
-
-This will execute commandd on the machine running the terraform commands eg. plan apply
+This will execute commands on the machine running the terraform commands eg. plan apply
 
 ```tf
 resource "aws_instance" "web" {
@@ -353,9 +351,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-https://developer.hashicorp.com/terraform/language/resources/provisioners/local-exec
-
-### Remote=exec
+### [Remote-exec](https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec)
 
 This will execute commands on a machine which you target. You will need to provide credentials such as ssh to get into the machine.
 
@@ -381,7 +377,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
+### Assets Upload For Each
 
 ## For Each Expressions
 
