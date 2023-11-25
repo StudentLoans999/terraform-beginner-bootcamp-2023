@@ -397,18 +397,18 @@ This is useful for when you are creating multiples of a cloud resource and you w
 
 Locally delete a tag
 ```sh
-git tag -d <tag_name>
+git tag -d tag_name
 ```
 
 Remotely delete a tag
 ```sh
-git push --delete origin tagname
+git push --delete origin tag_name
 ```
 
 Checkout the commit that you want to retag. Grab the sha from your Github history.
 
 ```sh
-git checkout <SHA>
+git checkout SHA
 git tag M.M.P
 git push --tags
 git checkout main
