@@ -16,7 +16,7 @@
   - [What happens if we lose our state file?](#what-happens-if-we-lose-our-state-file)
   - [Fix missing resources with Terraform import](#fix-missing-resources-with-terraform-import)
   - [Fix manual configuration](#fix-manual-configuration)
-- [1.4.0 AWS terrahome Module](#aws-terrahome-module)
+- [Terraform Modules](#terraform-modules)
   - [Passing input variables](#passing-input-variables)
   - [Module sources](#module-sources)
 - [1.5.0 Content Delivery Network](#content-delivery-network)
@@ -198,6 +198,12 @@ terraform apply -refresh-only -auto-approve`
 ## Terraform Modules
 
 ### Terraform Module Structure
+
+[Modules](developer.hashicorp.com/terraform/language/modules/develop/structure)
+
+- Divide the infrastructure into two modules
+  - all the thing storage to storage module: S3 bucket, bucket policy, State website hosting, AWS caller identity current, 
+  - all the thing Content Deliver Network to delivery module.
 
 It is recommended to place modules in a `modules` directory when locally developing modules but you can name it whatever you like.
 
