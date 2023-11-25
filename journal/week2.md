@@ -1,5 +1,14 @@
 # Terraform Beginner Bootcamp 2023 - Week 2
 
+## Table of Contents
+
+- [Week 2 Live stream](#week-2-live-stream)
+  - [Week 2 Live agenda](#week-2-live-stream-agenda)
+- [Setting up Terratowns Mock Web Server](#setting-up-terratowns-mock-web-server)
+  - [Working with Ruby](#working-with-ruby)
+    - [Bundler](#bundler)
+    - [Install Gems](#install-gems)
+
 ## Working with Ruby
 
 ### Bundler
