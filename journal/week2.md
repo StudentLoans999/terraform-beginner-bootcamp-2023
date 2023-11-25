@@ -2,12 +2,15 @@
 
 ## Table of Contents
 
-- [Week 2 Live stream](#week-2-live-stream)
-  - [Week 2 Live agenda](#week-2-live-stream-agenda)
-- [Setting up Terratowns Mock Web Server](#setting-up-terratowns-mock-web-server)
-  - [Working with Ruby](#working-with-ruby)
+- [Working with Ruby](#working-with-ruby)
     - [Bundler](#bundler)
     - [Install Gems](#install-gems)
+    - [Executing ruby scripts in the context of Bundler](#executing-ruby-scripts-in-the-context-of-bundler)
+    - [Sinatra](#sinatra)
+- [Setting up Terratowns Mock Web Server](#setting-up-terratowns-mock-web-server)
+  - [Running the web server](#running-the-web-server)
+- [Resource Skeleton](#resource-skeleton)
+  - [CRUD](#crud)
 
 ## Working with Ruby
 
@@ -15,7 +18,7 @@
 
 Bundler is a package manager for ruby. It is the primary way to install ruby packages (known as gems) for ruby.
 
-#### Install Gems
+### Install Gems
 
 You need to create a Gemfile and define your gems in that file.
 
@@ -34,11 +37,11 @@ This will install the gems on the system globally (unlike nodejs which install p
 
 A Gemfile.lock will be created to lock down the gem versions used in this project.
 
-#### Executing ruby scripts in the context of Bundler
+### Executing ruby scripts in the context of Bundler
 
 We have to use `bundle exec` to tell future ruby scripts to use the gems we installed. This is the way we set context.
 
-#### Sinatra
+### Sinatra
 
 Sinatra is a micro web-framework for ruby to build web-apps.
 
@@ -48,7 +51,7 @@ You can create a web-server in a single file.
 
 https://sinatrarb.com/
 
-## Terratowns Mock Server
+## Setting up Terratowns Mock Web Server
 
 ### Running the web server
 
