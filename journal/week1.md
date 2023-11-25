@@ -199,7 +199,7 @@ terraform apply -refresh-only -auto-approve`
 
 ### Terraform Module Structure
 
-[Modules](developer.hashicorp.com/terraform/language/modules/develop/structure)
+[Modules](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
 - Divide the infrastructure into two modules
   - all the thing storage to storage module: S3 bucket, bucket policy, State website hosting, AWS caller identity current, 
