@@ -138,7 +138,7 @@ terraform apply -var = "user_uid="my-user_uid"
 
 [Terraform Input Variables - Variable Definitions Files AKA .tfvars](https://developer.hashicorp.com/terraform/language/values/variables#variable-definitions-tfvars-files)
 
-`var-file` is a flag used to specify a variable definitions file
+`var-file` is a flag used to specify a variable definitions file (which is used to defina and stor emultiple variables that can be used in the command line)
 
 ```tf
 terraform apply -var-file = "testing.tfvars"
