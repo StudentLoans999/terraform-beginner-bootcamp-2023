@@ -167,11 +167,13 @@ Terraform loads variables in the following order, with later sources taking prec
 
 ## Dealing with Configuration Drift
 
+Any attribute values that are specified within terraform config will be ignored during import and all attributes that have defaults defined within the schema will have the default assigned.
+
 ### What happens if we lose our state file?
 
 If you lose your state file, you most likely have to tear down all your cloud infrastructure manually.
 
-You can use terraform import but it won't work for all cloud resources. You need to check the terraform providers documentation for which resources support import.
+You can use terraform import but it won't work for all cloud resources. You need to check the terraform providers documentation and the terraform registry for which resources support import.
 
 ### Fix Missing Resources with Terraform Import
 
@@ -181,13 +183,13 @@ You can use terraform import but it won't work for all cloud resources. You need
 
 [AWS S3 Bucket Import](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#import)
 
-### Fix Manual Configuration
+### Fix by Manual Configuration
 
 If someone goes and deletes or modifies cloud resources manually through ClickOps -
 
 If we run `terraform plan` it will attempt to put our infrastructure back into the expected state, fixing Configuration Drift
 
-### Fix using Terrafrom Refresh
+### Fix using Terraform Refresh
 
 ```sh
 terraform apply -refresh-only -auto-approve`
