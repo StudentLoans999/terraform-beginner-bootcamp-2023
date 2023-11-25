@@ -13,7 +13,6 @@
   - [`terraform.tfvars`](#terraformtfvars)
   - [`auto.tfvars`](#autotfvars)
 - [Dealing with configuration drift](#dealing-with-configuration-drift)
-  - [This session's workflow in my Medium blog post]()
   - [What happens if we lose our state file?](#what-happens-if-we-lose-our-state-file)
   - [Fix missing resources with Terraform import](#fix-missing-resources-with-terraform-import)
   - [Fix manual configuration](#fix-manual-configuration)
