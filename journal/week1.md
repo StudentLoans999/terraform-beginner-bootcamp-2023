@@ -167,7 +167,7 @@ Terraform loads variables in the following order, with later sources taking prec
 
 ## Dealing with Configuration Drift
 
-## What happens if we lose our state file?
+### What happens if we lose our state file?
 
 If you lose your state file, you most likely have to tear down all your cloud infrastructure manually.
 
@@ -187,7 +187,7 @@ If someone goes and deletes or modifies cloud resources manually through ClickOp
 
 If we run `terraform plan` it will attempt to put our infrastructure back into the expected state, fixing Configuration Drift
 
-## Fix using Terrafrom Refresh
+### Fix using Terrafrom Refresh
 
 ```sh
 terraform apply -refresh-only -auto-approve`
