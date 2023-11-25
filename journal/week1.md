@@ -265,11 +265,13 @@ In terraform there is a special variable called `path` that allows us to referen
 
 [Special Path Variable](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
 
+```tf
 resource "aws_s3_object" "index_html" {
   bucket = aws_s3_bucket.website_bucket.bucket
   key    = "index.html"
   source = "${path.root}/public/index.html"
 }
+```
 
 ## Terraform Locals
 
