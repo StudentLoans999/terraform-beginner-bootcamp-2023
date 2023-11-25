@@ -31,8 +31,9 @@
     - [Terraform Directory](#terraform-directory)
 - [AWS S3 Terraform](#aws-s3-terraform)
   - [AWS S3 Bucket Naming](#aws-s3-bucket-naming)
-- [Launching Terraform Cloud integration with CLI-driven workflow](#launching-terraform-cloud-integration-with-cli-driven-workflow)
-- [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
+- [Terraform Cloud and Terraform login](#terraform-cloud-and-terraform-login) 
+  - [Launching Terraform Cloud integration with CLI-driven workflow](#launching-terraform-cloud-integration-with-cli-driven-workflow)
+  - [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
 - [TF alias for Terraform](#tf-alias-for-terraform)
 
 ## Terraform Syncing with Github
@@ -339,6 +340,8 @@ If you lose this file, you lose knowing the state of your infrastructure.
 
 We had to change the parameters in the bucket_name resource in ([/main.tf](/main.tf)) to only have lowercase letters (also increased the length just to make sure the name was globally unique).
 
+### Terraform Cloud and Terraform login
+
 ## Launching Terraform Cloud integration with CLI-driven workflow
 
 - Terraform Workspace: a container in Terraform Cloud for infrastructure state, configurations, and settings. 
@@ -381,7 +384,7 @@ Provide the following code (replace your token in the file):
 
 We have automated this workaround with the following bash script ([/bin/generate_tfrc_credentials](/bin/generate_tfrc_credentials))
 
-## TF alias for Terraform
+### TF alias for Terraform
 
 Set an alias for terraform to be tf in our bash profile.
 
