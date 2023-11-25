@@ -21,6 +21,9 @@
   - [Passing input variables](#passing-input-variables)
   - [Module sources](#module-sources)
 - [Working with Files in Terraform](#working-with-files-in-terraform)
+  - [Fileexists Function](#fileexists-function)
+  - [Filemd5 Function](#filemd5-function)
+  - [Path Variable](#path-variable) 
 - [1.5.0 Content Delivery Network](#content-delivery-network)
   - [Data Sources](#data-sources)
   - [Terraform locals](#terraform-locals)
@@ -240,7 +243,7 @@ module "terrahouse_aws" {
 
 ## Working with Files in Terraform
 
-### Fileexists function
+### Fileexists Function
 
 https://developer.hashicorp.com/terraform/language/functions/fileexists
 
@@ -250,7 +253,7 @@ This is a built-in terraform function to check the existence of a file.
 condition = fileexists(var.error_html_filepath)
 ```
 
-### Filemd5 function
+### Filemd5 Function
 
 https://developer.hashicorp.com/terraform/language/functions/filemd5
 
