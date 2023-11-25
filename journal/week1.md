@@ -16,7 +16,8 @@
   - [What happens if we lose our state file?](#what-happens-if-we-lose-our-state-file)
   - [Fix missing resources with Terraform import](#fix-missing-resources-with-terraform-import)
   - [Fix manual configuration](#fix-manual-configuration)
-- [Terraform Modules](#terraform-modules)
+- [Terrahome Modules](#terrahome-modules)
+  - [Our Terrahome Modules Structure](#our-terrahome-modules-structure)
   - [Passing input variables](#passing-input-variables)
   - [Module sources](#module-sources)
 - [1.5.0 Content Delivery Network](#content-delivery-network)
@@ -195,15 +196,17 @@ If we run `terraform plan` it will attempt to put our infrastructure back into t
 terraform apply -refresh-only -auto-approve`
 ```
 
-## Terraform Modules
+## Terrahome Modules
 
 ### Terraform Module Structure
 
 [Modules](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
+### Our Terrahome Modules Structure
+
 - Divide the infrastructure into two modules
-  - all the thing storage to storage module: S3 bucket, bucket policy, State website hosting, AWS caller identity current, 
-  - all the thing Content Deliver Network to delivery module.
+  - Storage module: S3 bucket, bucket policy, State website hosting, AWS caller identity current 
+  - Delivery module: Content Delivery Network
 
 It is recommended to place modules in a `modules` directory when locally developing modules but you can name it whatever you like.
 
@@ -220,7 +223,7 @@ module "terrahouse_aws" {
 }
 ```
 
-### Modules Sources
+### Module Sources
 
 Using the source we can import the module from various places eg:
 - locally
@@ -233,7 +236,7 @@ module "terrahouse_aws" {
 }
 ```
 
-[Modules Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+[Modules Source](https://developer.hashicorp.com/terraform/language/modules/sources)
 
 ## Fixing Tags
 
